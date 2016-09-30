@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 import java.util.Collections;
+import java.util.Scanner;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
 public class Runner
@@ -14,12 +15,9 @@ public class Runner
 				playerScore=0;
 				compScore=0;
 				System.out.println("lets play war!! First to 22 wins");
-				fillDeck();
 				
 				while(stillPlaying)
 					{
-						
-						if
 						dealCards();
 						if(compScore>21 || playerScore>21)
 							{
@@ -93,13 +91,13 @@ public class Runner
 			if(deck.get(0).getRanking()<deck.get(1).getRanking())
 				{
 					compScore=compScore+2;
-					System.out.println("You lost that hand your score is "+playerScore+"the Computer's score is "+compScore);
+					System.out.println("You lost that hand your score is "+playerScore+" the Computer's score is "+compScore);
 
 				}
 			if(deck.get(0).getRanking()>deck.get(1).getRanking())
 				{
 					playerScore=playerScore+2;
-					System.out.println("You won that hand your score is "+playerScore+"the Computer's score is "+compScore);
+					System.out.println("You won that hand your score is "+playerScore+" the Computer's score is "+compScore);
 				}
 		}
 	
